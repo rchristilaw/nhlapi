@@ -1,0 +1,109 @@
+{
+  "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+  "teams" : [ {
+    "id" : 10,
+    "name" : "Toronto Maple Leafs",
+    "link" : "/api/v1/teams/10",
+    "venue" : {
+      "name" : "Scotiabank Arena",
+      "link" : "/api/v1/venues/null",
+      "city" : "Toronto",
+      "timeZone" : {
+        "id" : "America/Toronto",
+        "offset" : -4,
+        "tz" : "EDT"
+      }
+    },
+    "abbreviation" : "TOR",
+    "teamName" : "Maple Leafs",
+    "locationName" : "Toronto",
+    "firstYearOfPlay" : "1917",
+    "division" : {
+      "id" : 17,
+      "name" : "Atlantic",
+      "nameShort" : "ATL",
+      "link" : "/api/v1/divisions/17",
+      "abbreviation" : "A"
+    },
+    "conference" : {
+      "id" : 6,
+      "name" : "Eastern",
+      "link" : "/api/v1/conferences/6"
+    },
+    "franchise" : {
+      "franchiseId" : 5,
+      "teamName" : "Maple Leafs",
+      "link" : "/api/v1/franchises/5"
+    },
+    "nextGameSchedule" : {
+      "totalItems" : 1,
+      "totalEvents" : 0,
+      "totalGames" : 1,
+      "totalMatches" : 0,
+      "dates" : [ {
+        "date" : "2018-10-06",
+        "totalItems" : 1,
+        "totalEvents" : 0,
+        "totalGames" : 1,
+        "totalMatches" : 0,
+        "games" : [ {
+          "gamePk" : 2018020018,
+          "link" : "/api/v1/game/2018020018/feed/live",
+          "gameType" : "R",
+          "season" : "20182019",
+          "gameDate" : "2018-10-06T23:00:00Z",
+          "status" : {
+            "abstractGameState" : "Preview",
+            "codedGameState" : "1",
+            "detailedState" : "Scheduled",
+            "statusCode" : "1",
+            "startTimeTBD" : false
+          },
+          "teams" : {
+            "away" : {
+              "leagueRecord" : {
+                "wins" : 0,
+                "losses" : 0,
+                "ot" : 1,
+                "type" : "league"
+              },
+              "score" : 0,
+              "team" : {
+                "id" : 9,
+                "name" : "Ottawa Senators",
+                "link" : "/api/v1/teams/9"
+              }
+            },
+            "home" : {
+              "leagueRecord" : {
+                "wins" : 1,
+                "losses" : 0,
+                "ot" : 0,
+                "type" : "league"
+              },
+              "score" : 0,
+              "team" : {
+                "id" : 10,
+                "name" : "Toronto Maple Leafs",
+                "link" : "/api/v1/teams/10"
+              }
+            }
+          },
+          "venue" : {
+            "name" : "Scotiabank Arena",
+            "link" : "/api/v1/venues/null"
+          },
+          "content" : {
+            "link" : "/api/v1/game/2018020018/content"
+          }
+        } ],
+        "events" : [ ],
+        "matches" : [ ]
+      } ]
+    },
+    "shortName" : "Toronto",
+    "officialSiteUrl" : "http://www.mapleleafs.com",
+    "franchiseId" : 5,
+    "active" : true
+  } ]
+}

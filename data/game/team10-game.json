@@ -1,0 +1,245 @@
+{
+  "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+  "gamePk" : 2018020018,
+  "link" : "/api/v1/game/2018020018/feed/live",
+  "metaData" : {
+    "wait" : 10,
+    "timeStamp" : "20181003_102714"
+  },
+  "gameData" : {
+    "game" : {
+      "pk" : 2018020018,
+      "season" : "20182019",
+      "type" : "R"
+    },
+    "datetime" : {
+      "dateTime" : "2018-10-06T23:00:00Z"
+    },
+    "status" : {
+      "abstractGameState" : "Preview",
+      "codedGameState" : "1",
+      "detailedState" : "Scheduled",
+      "statusCode" : "1",
+      "startTimeTBD" : false
+    },
+    "teams" : {
+      "away" : {
+        "id" : 9,
+        "name" : "Ottawa Senators",
+        "link" : "/api/v1/teams/9",
+        "venue" : {
+          "id" : 5031,
+          "name" : "Canadian Tire Centre",
+          "link" : "/api/v1/venues/5031",
+          "city" : "Ottawa",
+          "timeZone" : {
+            "id" : "America/New_York",
+            "offset" : -4,
+            "tz" : "EDT"
+          }
+        },
+        "abbreviation" : "OTT",
+        "triCode" : "OTT",
+        "teamName" : "Senators",
+        "locationName" : "Ottawa",
+        "firstYearOfPlay" : "1992",
+        "division" : {
+          "id" : 17,
+          "name" : "Atlantic",
+          "nameShort" : "ATL",
+          "link" : "/api/v1/divisions/17",
+          "abbreviation" : "A"
+        },
+        "conference" : {
+          "id" : 6,
+          "name" : "Eastern",
+          "link" : "/api/v1/conferences/6"
+        },
+        "franchise" : {
+          "franchiseId" : 30,
+          "teamName" : "Senators",
+          "link" : "/api/v1/franchises/30"
+        },
+        "shortName" : "Ottawa",
+        "officialSiteUrl" : "http://www.ottawasenators.com",
+        "franchiseId" : 30,
+        "active" : true
+      },
+      "home" : {
+        "id" : 10,
+        "name" : "Toronto Maple Leafs",
+        "link" : "/api/v1/teams/10",
+        "venue" : {
+          "name" : "Scotiabank Arena",
+          "link" : "/api/v1/venues/null",
+          "city" : "Toronto",
+          "timeZone" : {
+            "id" : "America/Toronto",
+            "offset" : -4,
+            "tz" : "EDT"
+          }
+        },
+        "abbreviation" : "TOR",
+        "triCode" : "TOR",
+        "teamName" : "Maple Leafs",
+        "locationName" : "Toronto",
+        "firstYearOfPlay" : "1926",
+        "division" : {
+          "id" : 17,
+          "name" : "Atlantic",
+          "nameShort" : "ATL",
+          "link" : "/api/v1/divisions/17",
+          "abbreviation" : "A"
+        },
+        "conference" : {
+          "id" : 6,
+          "name" : "Eastern",
+          "link" : "/api/v1/conferences/6"
+        },
+        "franchise" : {
+          "franchiseId" : 5,
+          "teamName" : "Maple Leafs",
+          "link" : "/api/v1/franchises/5"
+        },
+        "shortName" : "Toronto",
+        "officialSiteUrl" : "http://www.mapleleafs.com",
+        "franchiseId" : 5,
+        "active" : true
+      }
+    },
+    "players" : { },
+    "venue" : {
+      "name" : "Scotiabank Arena",
+      "link" : "/api/v1/venues/null"
+    }
+  },
+  "liveData" : {
+    "plays" : {
+      "allPlays" : [ ],
+      "scoringPlays" : [ ],
+      "penaltyPlays" : [ ],
+      "playsByPeriod" : [ ]
+    },
+    "linescore" : {
+      "currentPeriod" : 0,
+      "periods" : [ ],
+      "shootoutInfo" : {
+        "away" : {
+          "scores" : 0,
+          "attempts" : 0
+        },
+        "home" : {
+          "scores" : 0,
+          "attempts" : 0
+        }
+      },
+      "teams" : {
+        "home" : {
+          "team" : {
+            "id" : 10,
+            "name" : "Toronto Maple Leafs",
+            "link" : "/api/v1/teams/10",
+            "abbreviation" : "TOR",
+            "triCode" : "TOR"
+          },
+          "goals" : 0,
+          "shotsOnGoal" : 0,
+          "goaliePulled" : false,
+          "numSkaters" : 0,
+          "powerPlay" : false
+        },
+        "away" : {
+          "team" : {
+            "id" : 9,
+            "name" : "Ottawa Senators",
+            "link" : "/api/v1/teams/9",
+            "abbreviation" : "OTT",
+            "triCode" : "OTT"
+          },
+          "goals" : 0,
+          "shotsOnGoal" : 0,
+          "goaliePulled" : false,
+          "numSkaters" : 0,
+          "powerPlay" : false
+        }
+      },
+      "powerPlayStrength" : "Even",
+      "hasShootout" : false,
+      "intermissionInfo" : {
+        "intermissionTimeRemaining" : 0,
+        "intermissionTimeElapsed" : 0,
+        "inIntermission" : false
+      }
+    },
+    "boxscore" : {
+      "teams" : {
+        "away" : {
+          "team" : {
+            "id" : 9,
+            "name" : "Ottawa Senators",
+            "link" : "/api/v1/teams/9",
+            "abbreviation" : "OTT",
+            "triCode" : "OTT"
+          },
+          "teamStats" : {
+            "teamSkaterStats" : {
+              "goals" : 0,
+              "pim" : 0,
+              "shots" : 0,
+              "powerPlayPercentage" : "0.0",
+              "powerPlayGoals" : 0.0,
+              "powerPlayOpportunities" : 0.0,
+              "faceOffWinPercentage" : "0.0",
+              "blocked" : 0,
+              "takeaways" : 0,
+              "giveaways" : 0,
+              "hits" : 0
+            }
+          },
+          "players" : { },
+          "goalies" : [ ],
+          "skaters" : [ ],
+          "onIce" : [ ],
+          "onIcePlus" : [ ],
+          "scratches" : [ ],
+          "penaltyBox" : [ ],
+          "coaches" : [ ]
+        },
+        "home" : {
+          "team" : {
+            "id" : 10,
+            "name" : "Toronto Maple Leafs",
+            "link" : "/api/v1/teams/10",
+            "abbreviation" : "TOR",
+            "triCode" : "TOR"
+          },
+          "teamStats" : {
+            "teamSkaterStats" : {
+              "goals" : 0,
+              "pim" : 0,
+              "shots" : 0,
+              "powerPlayPercentage" : "0.0",
+              "powerPlayGoals" : 0.0,
+              "powerPlayOpportunities" : 0.0,
+              "faceOffWinPercentage" : "0.0",
+              "blocked" : 0,
+              "takeaways" : 0,
+              "giveaways" : 0,
+              "hits" : 0
+            }
+          },
+          "players" : { },
+          "goalies" : [ ],
+          "skaters" : [ ],
+          "onIce" : [ ],
+          "onIcePlus" : [ ],
+          "scratches" : [ ],
+          "penaltyBox" : [ ],
+          "coaches" : [ ]
+        }
+      },
+      "officials" : [ ]
+    },
+    "decisions" : { }
+  }
+}
