@@ -5,10 +5,6 @@ class TeamService(object):
         self.dataSource = dataSource
         self.teams = self.initTeamsList()
 
-    def getTeamsList(self):
-        return self.teams
-
-
     def initTeamsList(self):
         teamsData = self.dataSource.getTeams()
         teams = []
@@ -16,3 +12,10 @@ class TeamService(object):
             teams.append(Team(teamData))
         
         return teams
+
+    def getTeamsList(self):
+        return self.teams
+
+    def getTeamByAbbreviation(self, abbreviation):
+        return next((team for team in self.teams if team.getAbbreviation() == abbreviation), None)
+

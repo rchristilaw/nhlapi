@@ -22,43 +22,18 @@ class NhlApi(object):
     def getTeamsList(self):
         return self.teamService.getTeamsList()
 
-    def getGame(self, teamName): 
-        url = url_constants.NHL_API_BASE_URL + "api/v1/teams/" + teamName + "?expand=team.schedule.next"
+    def getTeam(self, abbreviation):
+        return self.teamService.getTeamByAbbreviation(abbreviation)
 
-        r = requests.get(url)
-        nextGame = r.json()
-
-        print nextGame
-
-        return
-
-        liveFeedUrl = nextGame['teams'][0]['nextGameSchedule']['dates'][0]['games'][0]['link']
-        feedUrl = url_constants.NHL_API_BASE_URL + liveFeedUrl
-
-        r = requests.get(feedUrl)
-        gameData = r.json()
-
-        print gameData
-
-        # awayTeam = Team(gameData['gameData']['teams']['away'])
-        # homeTeam = Team(gameData['gameData']['teams']['home'])
-        # utcStartTime = gameData['gameData']['datetime']['dateTime']
-
-    def testPrint(self):
-        print self.test
-
-    def readFromJson(self, fileName):
-        with open(fileName) as json_data:
-            d = json.load(json_data)
-            print(d)
 
 # Main function
 if __name__ == "__main__":
     dataSource = json_api.Api()
     nhlapi = NhlApi(dataSource)
-    # nhlapi.readFromJson('../data/teams.json')
     
-    teams = nhlapi.getTeamsList()
-    for team in teams:
-        print team.getTeamName()
+    # teams = nhlapi.getTeamsList()
+    # for team in teams:
+    #     print team.getTeamName()
+
+    print nhlapi.getTeam("DET").getTeamName()
     # api.getGame("10")
