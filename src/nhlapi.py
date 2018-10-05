@@ -23,7 +23,7 @@ class NhlApi(object):
         return self.teamService.getTeamsList()
 
     def getTeam(self, abbreviation):
-        return self.teamService.getTeamByAbbreviation(abbreviation)
+        return self.teamService.getNextGameForTeam(abbreviation)
 
 
 # Main function
@@ -35,5 +35,5 @@ if __name__ == "__main__":
     # for team in teams:
     #     print team.getTeamName()
 
-    print nhlapi.getTeam("DET").getTeamName()
+    print nhlapi.getTeam("DET")
     # api.getGame("10")
