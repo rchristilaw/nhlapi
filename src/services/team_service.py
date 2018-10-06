@@ -18,8 +18,4 @@ class TeamService(object):
 
     def getTeamByAbbreviation(self, abbreviation):
         return next((team for team in self.teams if team.getAbbreviation() == abbreviation), None)
-
-    def getNextGameForTeam(self, abbreviation):
-        team = self.getTeamByAbbreviation(abbreviation)
-        return self.dataSource.getNextGameDataForTeam(team.getId())
         

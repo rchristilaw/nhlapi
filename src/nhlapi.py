@@ -1,16 +1,11 @@
 #!/usr/bin/env python
-import urllib2
-import json
-import time
-import requests
-# import platform
 
-
-from constants import url_constants
-from constants import team_constants
 from services.team_service import TeamService
-import api
-import json_api
+from services.game_service import GameService
+from data_source import api
+from data_source import json_api
+
+import time
 
 
 
@@ -18,22 +13,39 @@ class NhlApi(object):
     def __init__(self, dataSource):
         self.dataSource = dataSource
         self.teamService = TeamService(self.dataSource)
+        self.gameService = GameService(self.dataSource)
 
     def getTeamsList(self):
         return self.teamService.getTeamsList()
 
-    def getTeam(self, abbreviation):
-        return self.teamService.getNextGameForTeam(abbreviation)
+    def getNextGameForTeam(self, abbrev):
+        team = self.teamService.getTeamByAbbreviation(abbrev)
+        return self.gameService.getNextGameForTeam(team)
+
+    def getUpdatedGame(self, game):
+        return self.gameService.updateGame(game)
 
 
 # Main function
 if __name__ == "__main__":
     dataSource = json_api.Api()
     nhlapi = NhlApi(dataSource)
+
+
     
     # teams = nhlapi.getTeamsList()
     # for team in teams:
     #     print team.getTeamName()
 
-    print nhlapi.getTeam("DET")
-    # api.getGame("10")
+    game = nhlapi.getNextGameForTeam("TOR")
+    print(game.getStartTime())
+
+    i = 0
+    while (i < 8):
+        game = nhlapi.getUpdatedGame(game)
+
+        if (game.getHasChanges()):
+            print(game.getHomeTeam().getScore())
+            game.setHasChanges(False)
+        time.sleep(5)
+        i += 1
