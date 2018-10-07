@@ -2,3 +2,5 @@
 .DS_Store
 VIRTUAL/
 *.pyc
+dist
+*.egg-info
