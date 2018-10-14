@@ -10,7 +10,8 @@ import time
 
 
 class NhlApi(object):
-    def __init__(self, dataSource):
+    def __init__(self):
+        dataSource = json_api.Api()
         self.dataSource = dataSource
         self.teamService = TeamService(self.dataSource)
         self.gameService = GameService(self.dataSource)
@@ -25,11 +26,14 @@ class NhlApi(object):
     def getUpdatedGame(self, game):
         return self.gameService.updateGame(game)
 
+    def getTodaysGames(self):
+        return self.gameService.getTodaysGames()
+
 
 # Main function
 if __name__ == "__main__":
-    dataSource = json_api.Api()
-    nhlapi = NhlApi(dataSource)
+    
+    # nhlapi = NhlApi(dataSource)
 
 
     

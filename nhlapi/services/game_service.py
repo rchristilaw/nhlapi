@@ -24,6 +24,9 @@ class GameService(object):
 
         return Game(awayTeam, homeTeam, time_util.convertToUtcDatetime(utcStartTime), feedUrl)
 
+    def getTodaysGames(self):
+        games 
+
     def updateGame(self, game):
 
         if (time_util.isBeforeCurrentTime(game.getStartTime()) is False):
